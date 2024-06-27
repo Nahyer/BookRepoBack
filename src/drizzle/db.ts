@@ -6,7 +6,7 @@ import assert from "assert";
 
 assert(process.env.DATABASE_URL, "DATABASE_URL is not set in the .env file");
 
-const client = neon(process.env.DATABASE_URL);
+const client = neon(process.env.DATABASE_URL!);
 
 const db = drizzle(client, { schema, logger: true })  //create a drizzle instance
 
