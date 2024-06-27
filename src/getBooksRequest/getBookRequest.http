@@ -1,0 +1,30 @@
+GET http://localhost:8000/api/books
+
+###
+GET http://localhost:8000/api/books/1
+###
+POST http://localhost:8000/api/books/create
+Content-Type: application/json
+
+{
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "year": 1937,
+    "pages": 310,
+    "read": true
+}
+
+###
+PUT http://localhost:8000/api/books/update/1
+Content-Type: application/json
+
+{
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "year": 1937,
+    "pages": 40,
+    "read": false
+}
+
+###
+DELETE http://localhost:8000/api/books/delete/1
