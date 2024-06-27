@@ -6,8 +6,7 @@ export const BookTable = pgTable('Books', {
     title: varchar('title').notNull(),
     author: varchar('author').notNull(),
     year: integer('year').notNull(),
-    pages: integer('pages').notNull(),
-    read: boolean('read').notNull(),
+    pages: integer('pages').notNull()
 });
 
 export type TIBook = typeof BookTable.$inferInsert;
